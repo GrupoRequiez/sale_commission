@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="sale_commission_brand_form" model="ir.ui.view">
         <field name="name">sale.commission.brand.form</field>
@@ -28,9 +28,9 @@
                 <field name="brand_id"/>
                 <field name="commission"/>
             </tree>
-        </field>
-    </record>
-    <record id="sale_commission_brand_action" model="ir.actions.act_window">
+          </field>
+      </record>
+      <record id="sale_commission_brand_action" model="ir.actions.act_window">
         <field name="name">Seller Commission</field>
         <field name="res_model">sale.commission.brand</field>
         <field name="view_mode">tree,form</field>
@@ -39,5 +39,10 @@
             <p class="oe_view_nocontent_create">Click to set a new Seller Commission.</p>
         </field>
     </record>
-    <menuitem id="menu_sale_commission_brand" name="Seller Commission" sequence="6" action="sale_commission_brand_action" parent="sale.menu_sales_config"/>
+    <menuitem
+        id="menu_sale_commission_brand"
+        name="Seller Commission"
+        sequence="6"
+        action="sale_commission_brand_action"
+        parent="sale.menu_sales_config"/>
 </odoo>
