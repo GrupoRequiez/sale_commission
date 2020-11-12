@@ -8,3 +8,4 @@ from . import sale_commission
 from . import sale_commission_brand
 from . import sale_commission_settings
 from . import account_move_line
+from . import reconciliation_widget
