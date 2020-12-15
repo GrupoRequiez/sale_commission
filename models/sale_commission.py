@@ -100,8 +100,10 @@ class SaleCommission(models.TransientModel):
         }
 
     user_id = fields.Many2one('res.users', 'Salesman')
-    date_start = fields.Date('Start Date', required=True)
-    date_end = fields.Date('End Date', required=True)
+    date_start = fields.Datetime('Start Date', required=True,
+                                 default=lambda self: fields.datetime.now())
+    date_end = fields.Datetime('End Date', required=True,
+                               default=lambda self: fields.datetime.now())
     sale_commission_detail_ids = fields.One2many('sale.commission.detail',
                                                  'sale_commission_id',
                                                  'Details')
