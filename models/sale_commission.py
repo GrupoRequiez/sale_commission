@@ -30,7 +30,7 @@ class SaleCommission(models.TransientModel):
         # We take the associations that are within the range of dates
         # and the user_id of the invoice selected in the wizard.
         association_ids = association_obj.search([
-            ('date', '>=', date_start), ('date', '<=', date_stop),
+            ('date_create', '>=', date_start), ('date_create', '<=', date_stop),
             ('invoice_id.user_id.id', '=', user_id),
             ('invoice_id.type', '=', 'out_invoice'),
             ('invoice_id.state', 'in', ['open', 'paid']),
