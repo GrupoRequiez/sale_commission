@@ -53,7 +53,7 @@ class AccountReconciliation(models.AbstractModel):
                         self.env['account.association'].create({
                             'invoice_id': invoice.id,
                             'move_line_id': move_line.id,
-                            'date': fields.Date.today(),
+                            'date': fields.datetime.now(),
                         })
 
     @api.model
@@ -93,5 +93,5 @@ class AccountReconciliation(models.AbstractModel):
                         self.env['account.association'].create({
                             'invoice_id': invoice.id,
                             'move_line_id': move_line.id,
-                            'date': fields.Date.today(),
+                            'date': fields.datetime.now(),
                         })

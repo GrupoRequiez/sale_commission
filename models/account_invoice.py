@@ -19,9 +19,9 @@ class AccountInvoice(models.Model):
         vals = {
             'invoice_id': self.id,
             'move_line_id': credit_aml_id,
-            'date': fields.Date.today()}
+            'date': fields.datetime.now()}
         if association_ids:
-            association_ids.update(date=fields.Date.today())
+            association_ids.update(date=fields.datetime.now())
         else:
             self.env['account.association'].create(vals)
         return res
