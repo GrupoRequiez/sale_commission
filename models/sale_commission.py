@@ -34,7 +34,6 @@ class SaleCommission(models.TransientModel):
             ('date', '>=', date_start), ('date', '<=', date_stop),
             ('move_id.invoice_user_id.id', '=', user_id),
             ('aml_invoice_type', '=', 'out_invoice'),
-            # ('move_id.move_type', '=', 'out_invoice'),
             ('move_id.state', '=', 'posted'),
             ('aml_state', '=', 'posted'),
             # Filter out Credit Notes
